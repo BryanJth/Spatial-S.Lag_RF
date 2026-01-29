@@ -47,21 +47,21 @@ Dataset file in this repo:
 ## Methods
 
 ### 1) OLS baseline + diagnostics
-- Fit: $ Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_3 + \beta_4 X_4 + \varepsilon $
-- Diagnostics in `Regression Assumption Test.R`:
-  - Normality (Shapiro-Wilk)
+- **Model (OLS):** **Y = β₀ + β₁X₁ + β₂X₂ + β₃X₃ + β₄X₄ + ε**
+- **Diagnostics** are implemented in `Regression Assumption Test.R`:
+  - Normality (Shapiro–Wilk)
   - Multicollinearity (VIF)
   - Homoscedasticity (Breusch–Pagan)
   - Residual independence (Durbin–Watson)
 
 ### 2) Spatial econometrics (SAR/SEM/SAC)
-Spatial weights (W) are built from district adjacency (contiguity) using the **East Java shapefile**.
+Spatial weights **W** are built from district adjacency (contiguity) using the **East Java shapefile**.
 
-- **Moran’s I** checks spatial autocorrelation.
-- **LM tests (lag/error)** guide which spatial model is appropriate.
+- Moran’s I checks spatial autocorrelation.
+- LM tests (lag/error) guide which spatial model is appropriate.
 - Models estimated (as used in the notebook/report):
-  - **SAR / SLM (Spatial Lag):** includes spatially lagged dependent variable $ \rho WY $
-  - **SEM (Spatial Error):** spatial dependence in residuals $ \lambda W\varepsilon $
+  - **SAR / SLM (Spatial Lag):** includes spatially lagged dependent variable **ρWY**
+  - **SEM (Spatial Error):** spatial dependence in residuals **λWε**
   - **SAC:** combination of lag + error dependence
 
 ### 3) Spatial Random Forest (spatialRF)
