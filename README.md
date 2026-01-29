@@ -12,8 +12,6 @@ This repository contains an end-to-end **spatial modeling workflow** to analyze 
 
 ## TL;DR (Key Findings)
 
-From the report/paper:
-
 - **Spatial dependence exists** in poverty rates (neighboring districts tend to have similar poverty levels), so spatial models are justified.
 - In the regression-based models, the strongest and most consistent drivers are:
   - **Rata-rata Lama Sekolah (RLS)** *(X2)* → **negative** association with poverty (higher schooling ↘ poverty)
