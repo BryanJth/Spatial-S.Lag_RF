@@ -157,10 +157,3 @@ Depending on which script you run, you will see:
 - If any join between the dataset and shapefile fails, check the **region identifier column** (district/city name or code) and align naming (case/spacing).
 - Spatial workflows are sensitive to CRS. Ensure both dataset coordinates (if any) and shapefile CRS are consistent.
 
----
-
-## References / Materials
-See:
-- `Docs/RSRF Makalah.pdf`
-- `Docs/RSRF Paper.pdf`
-- `Docs/RFRS Presentation.pdf`
