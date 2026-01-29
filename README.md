@@ -12,6 +12,8 @@ This repository contains an end-to-end **spatial modeling workflow** to analyze 
 
 ## TL;DR (Key Findings)
 
+From the report/paper:
+
 - **Spatial dependence exists** in poverty rates (neighboring districts tend to have similar poverty levels), so spatial models are justified.
 - In the regression-based models, the strongest and most consistent drivers are:
   - **Rata-rata Lama Sekolah (RLS)** *(X2)* → **negative** association with poverty (higher schooling ↘ poverty)
@@ -45,7 +47,7 @@ Dataset file in this repo:
 ## Methods
 
 ### 1) OLS baseline + diagnostics
-- Fit: \( Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_3 + \beta_4 X_4 + \varepsilon \)
+- Fit: $ Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_3 + \beta_4 X_4 + \varepsilon $
 - Diagnostics in `Regression Assumption Test.R`:
   - Normality (Shapiro-Wilk)
   - Multicollinearity (VIF)
@@ -58,8 +60,8 @@ Spatial weights (W) are built from district adjacency (contiguity) using the **E
 - **Moran’s I** checks spatial autocorrelation.
 - **LM tests (lag/error)** guide which spatial model is appropriate.
 - Models estimated (as used in the notebook/report):
-  - **SAR / SLM (Spatial Lag):** includes spatially lagged dependent variable \( \rho WY \)
-  - **SEM (Spatial Error):** spatial dependence in residuals \( \lambda W\varepsilon \)
+  - **SAR / SLM (Spatial Lag):** includes spatially lagged dependent variable $ \rho WY $
+  - **SEM (Spatial Error):** spatial dependence in residuals $ \lambda W\varepsilon $
   - **SAC:** combination of lag + error dependence
 
 ### 3) Spatial Random Forest (spatialRF)
